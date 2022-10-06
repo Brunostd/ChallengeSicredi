@@ -46,6 +46,7 @@ class SuccessCheckInFragment : Fragment() {
     private fun setListener() {
         binding.backComprovante.setOnClickListener {
             findNavController().navigate(R.id.action_successCheckInFragment_to_homeFragment)
+            findNavController().clearBackStack(R.id.action_successCheckInFragment_to_homeFragment)
         }
         binding.buttonCompartilhar.setOnClickListener {
             screenShot(requireView())?.let { it1 -> share(it1) }
