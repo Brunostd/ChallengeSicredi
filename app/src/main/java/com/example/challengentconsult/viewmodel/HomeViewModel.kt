@@ -8,13 +8,13 @@ import com.example.challengentconsult.repository.EventRepository
 
 class HomeViewModel: ViewModel() {
 
-    private var listEvent: MutableLiveData<MutableList<EventModel>>? = null
+    private var listEvent = MutableLiveData<MutableList<EventModel>>()
 
     fun getEvents(): LiveData<MutableList<EventModel>>{
         return EventRepository().getEvents()
     }
 
-    fun getList(list: MutableList<EventModel>): MutableLiveData<MutableList<EventModel>>{
+    fun getList(list: MutableList<EventModel>): LiveData<MutableList<EventModel>>{
         list.forEach { event ->
             var auxInitImage = event.image.substring(0,5)
             if (auxInitImage != "https"){
@@ -22,9 +22,8 @@ class HomeViewModel: ViewModel() {
                 event.image = "https:" + auxImage
             }
         }
-        var auxList = MutableLiveData<MutableList<EventModel>>().apply {
-            value = list
-        }
-        return auxList
+        listEvent.value = list
+
+        return listEvent
     }
 }

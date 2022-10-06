@@ -10,27 +10,25 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import com.example.challengentconsult.R
-import com.example.challengentconsult.databinding.FragmentSelectedEventBinding
-import com.squareup.picasso.Picasso
+import com.example.challengentconsult.databinding.FragmentSuccessCheckInBinding
 
-class SelectedEventFragment : Fragment() {
-    private var _binding: FragmentSelectedEventBinding? = null
+class SuccessCheckInFragment : Fragment() {
+    private var _binding: FragmentSuccessCheckInBinding? = null
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
-    private val args: SelectedEventFragmentArgs by navArgs()
+    private val args: SuccessCheckInFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentSelectedEventBinding.inflate(inflater, container, false)
+        _binding = FragmentSuccessCheckInBinding.inflate(inflater, container, false)
         val view = binding.root
 
         setView()
@@ -40,24 +38,16 @@ class SelectedEventFragment : Fragment() {
     }
 
     private fun setView() {
-        binding.textTitleSelectedEvent.text = args.selectEvent.title
-        Picasso.get().load(args.selectEvent.image).into(binding.imageSelectedEvent)
-        if (binding.imageSelectedEvent.drawable == null){
-            binding.imageSelectedEvent.setImageResource(R.drawable.erro)
-        }
-        binding.textDescriptionSelectedEvent.text = args.selectEvent.description
-        binding.textPriceSelectedEvent.text = args.selectEvent.price.toString()
+        binding.textIdComprovante.text      = args.checkInComprovante.id
+        binding.textNameComprovante.text    = args.checkInComprovante.name
+        binding.textEmailComprovante.text   = args.checkInComprovante.email
     }
 
     private fun setListener() {
-        binding.backSelected.setOnClickListener {
-            findNavController().popBackStack()
+        binding.backComprovante.setOnClickListener {
+            findNavController().navigate(R.id.action_successCheckInFragment_to_homeFragment)
         }
-        binding.textRealizarCheckIn.setOnClickListener {
-            val action = SelectedEventFragmentDirections.actionSelectedEventFragmentToCheckInFragment(args.selectEvent)
-            findNavController().navigate(action)
-        }
-        binding.textSelectedCompartilhar.setOnClickListener {
+        binding.buttonCompartilhar.setOnClickListener {
             screenShot(requireView())?.let { it1 -> share(it1) }
         }
     }
@@ -87,4 +77,5 @@ class SelectedEventFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
 }

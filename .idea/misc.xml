@@ -10,6 +10,8 @@
         <entry key="..\:/Users/batio/AndroidStudioProjects/ChallengeNTConsult/app/src/main/res/layout/fragment_check_in.xml" value="0.21" />
         <entry key="..\:/Users/batio/AndroidStudioProjects/ChallengeNTConsult/app/src/main/res/layout/fragment_home.xml" value="0.17135416666666667" />
         <entry key="..\:/Users/batio/AndroidStudioProjects/ChallengeNTConsult/app/src/main/res/layout/fragment_selected_event.xml" value="0.18541666666666667" />
+        <entry key="..\:/Users/batio/AndroidStudioProjects/ChallengeNTConsult/app/src/main/res/layout/fragment_success_check_in.xml" value="0.2" />
+        <entry key="..\:/Users/batio/AndroidStudioProjects/ChallengeNTConsult/app/src/main/res/layout/success.xml" value="0.184375" />
       </map>
     </option>
   </component>

@@ -33,5 +33,25 @@
         <argument
             android:name="eventCheckIn"
             app:argType="com.example.challengentconsult.model.EventModel" />
+        <action
+            android:id="@+id/action_checkInFragment_to_successCheckInFragment"
+            app:destination="@id/successCheckInFragment" />
+        <action
+            android:id="@+id/action_checkInFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/successCheckInFragment"
+        android:name="com.example.challengentconsult.ui.SuccessCheckInFragment"
+        android:label="fragment_success_check_in"
+        tools:layout="@layout/fragment_success_check_in" >
+        <argument
+            android:name="checkInComprovante"
+            app:argType="com.example.challengentconsult.model.CheckInModel" />
+        <action
+            android:id="@+id/action_successCheckInFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>
