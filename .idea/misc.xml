@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/batio/AndroidStudioProjects/ChallengeNTConsult/app/src/main/res/drawable/background_circle.xml" value="0.25" />
+        <entry key="..\:/Users/batio/AndroidStudioProjects/ChallengeNTConsult/app/src/main/res/drawable/background_full_circle.xml" value="0.1925" />
+        <entry key="..\:/Users/batio/AndroidStudioProjects/ChallengeNTConsult/app/src/main/res/layout/activity_main.xml" value="0.18541666666666667" />
+        <entry key="..\:/Users/batio/AndroidStudioProjects/ChallengeNTConsult/app/src/main/res/layout/events.xml" value="0.33" />
+        <entry key="..\:/Users/batio/AndroidStudioProjects/ChallengeNTConsult/app/src/main/res/layout/fragment_check_in.xml" value="0.21" />
+        <entry key="..\:/Users/batio/AndroidStudioProjects/ChallengeNTConsult/app/src/main/res/layout/fragment_home.xml" value="0.17135416666666667" />
+        <entry key="..\:/Users/batio/AndroidStudioProjects/ChallengeNTConsult/app/src/main/res/layout/fragment_selected_event.xml" value="0.18541666666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

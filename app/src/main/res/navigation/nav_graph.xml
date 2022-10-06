@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.challengentconsult.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_selectedEventFragment"
+            app:destination="@id/selectedEventFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectedEventFragment"
+        android:name="com.example.challengentconsult.ui.SelectedEventFragment"
+        android:label="fragment_selected_event"
+        tools:layout="@layout/fragment_selected_event" >
+        <argument
+            android:name="selectEvent"
+            app:argType="com.example.challengentconsult.model.EventModel" />
+        <action
+            android:id="@+id/action_selectedEventFragment_to_checkInFragment"
+            app:destination="@id/checkInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkInFragment"
+        android:name="com.example.challengentconsult.ui.CheckInFragment"
+        android:label="fragment_check_in"
+        tools:layout="@layout/fragment_check_in" >
+        <argument
+            android:name="eventCheckIn"
+            app:argType="com.example.challengentconsult.model.EventModel" />
+    </fragment>
+</navigation>
